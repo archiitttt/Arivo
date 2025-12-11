@@ -1,0 +1,121 @@
+
+
+.navbar{
+    background-color: white;
+    height: 6rem;
+}
+
+.nav-link{
+    color: #222222  !important;
+    font-size: 1.2rem;
+    position: relative;
+}
+
+.nav-link:not(#userDropdown)::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0%;
+    height: 2px;
+    background-color: #222222;
+    transition: width 0.3s ease-in-out;
+}
+
+.nav-link:not(#userDropdown):hover::after {
+    width: 90%;
+}
+
+#userDropdown::after {
+  display: none !important;
+}
+
+.card{
+    border:none;
+}
+
+.scale-hover{
+    transition: transform 0.5s ease;
+}
+
+.scale-hover:hover{
+    transform: scale(1.03);
+}
+
+.card-img-top{
+    border-radius: 1rem;
+    width: 100%;
+    height: 25rem;
+}
+
+.card-img-overlay{
+    opacity: 0;
+}
+
+.card-img-overlay:hover{
+    opacity: 0.07;
+    background-color: white;
+}
+
+.show-img{
+    height: 30vh;   
+}
+
+.card-img-side{
+    border-radius: 10px;
+    width: 100%;
+    height: 22rem;
+}
+
+.review-card{
+    border: 1px solid gray;
+}
+
+@media (max-width: 768px) {
+.navbar-collapse {
+    position: absolute;
+    top: 100%;
+    right: 1rem;
+    width: 200px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    padding: 0.75rem 0;
+    z-index: 1000;
+}
+.navbar-nav {
+    text-align: left;
+    padding-left: 0.75rem;
+}
+.navbar-nav .nav-link {
+    display: block;
+    padding: 0.5rem 1rem;
+    margin: 0.25rem 0;
+    border-radius: 6px;
+}
+.navbar-nav .nav-link:hover {
+    background-color: #f8f9fa;
+}
+@keyframes dropdownFade {
+    from { opacity: 0; transform: translateY(-5px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+}
+
+a,
+a:focus,
+a:active,
+.dropdown-item:focus,
+.dropdown-item:active,
+.nav-link:focus,
+.nav-link:active {
+  outline: none !important;
+  box-shadow: none !important;
+  background: none !important;
+  -webkit-tap-highlight-color: transparent !important; /* removes blue tap flash on Chrome */
+}
+
+
+
+
+

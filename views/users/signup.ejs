@@ -1,0 +1,30 @@
+<% layout('/layouts/boilerplate.ejs') %>
+
+<div class="row">
+    <div class="col-6 offset-3">
+        <h1>Sign Up on Arivo</h1>
+        <form action="/signup" method="post" novalidate class="needs-validation">
+
+            <div class=" mb-4">
+                <label for="username" class="form-label">Enter username:</label>
+                <input type="text" name="username" id="username" required class="form-control">
+                <div class="invalid-feedback">Enter a valid username.</div>
+            </div>
+
+            <div class=" mb-4">
+                <label for="email" class="form-label">Enter email:</label>
+                <input type="email" name="email" id="email" required class="form-control">
+                <div class="invalid-feedback">Enter a valid email.</div>
+            </div>
+
+            <div class=" mb-4">
+                <label for="password" class="form-label">Enter password:</label>
+                <input type="password" name="password" id="password" required class="form-control">
+                <div class="invalid-feedback">Enter a valid password.</div>
+            </div>
+
+            <button class="btn btn-outline-danger">Submit</button>
+        </form>
+        <p><a href="/login" class="link-dark link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover d-inline-block mt-3">Already have an account? Login Now.</a></p>
+    </div>
+</div>
